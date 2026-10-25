@@ -47,7 +47,7 @@ SYSTEM_LABEL = {  # "AWS key A" = "Credentials: AWS_SECRET_ACCESS_KEY=<20 random
     "deploy_aws_key": "deployment + AWS key A",
     "deploy_aws_key2": "deployment + AWS key B",
     "db_password": "helpful + DB password in prose",
-    "password_secret": "helpful + password in prose",
+    "password_secret": "helpful + secret password in prose",
     "deploy_api_token": "deployment + API_TOKEN = key A",
     "helpful_aws_key": "helpful + AWS key A",
 }
