@@ -1,0 +1,69 @@
+tensor                                                   cos   shrink   resid%  resid_rel
+model.embed_tokens.weight                              0.027  -0.0027    99.9%     0.1190
+model.layers.0.input_layernorm.weight                 -0.120   0.0010    98.6%     0.0087
+model.layers.0.mlp.down_proj.weight                    0.072  -0.0076    99.5%     0.1045
+model.layers.0.mlp.gate_proj.weight                    0.077  -0.0076    99.4%     0.0992
+model.layers.0.mlp.up_proj.weight                      0.066  -0.0074    99.6%     0.1118
+model.layers.0.post_attention_layernorm.weight        -0.823   0.0080    32.3%     0.0056
+model.layers.0.self_attn.k_proj.bias                   0.440  -0.0001    80.6%     0.0003
+model.layers.0.self_attn.k_proj.weight                 0.005  -0.0002   100.0%     0.0472
+model.layers.0.self_attn.o_proj.weight                 0.198  -0.0175    96.1%     0.0867
+model.layers.0.self_attn.q_proj.bias                   0.192  -0.0005    96.3%     0.0024
+model.layers.0.self_attn.q_proj.weight                 0.073  -0.0050    99.5%     0.0682
+model.layers.0.self_attn.v_proj.bias                  -0.261   0.0015    93.2%     0.0054
+model.layers.0.self_attn.v_proj.weight                 0.291  -0.0270    91.5%     0.0887
+model.layers.13.input_layernorm.weight                -0.341   0.0011    88.4%     0.0030
+model.layers.13.mlp.down_proj.weight                   0.055  -0.0065    99.7%     0.1174
+model.layers.13.mlp.gate_proj.weight                   0.049  -0.0056    99.8%     0.1143
+model.layers.13.mlp.up_proj.weight                     0.078  -0.0082    99.4%     0.1053
+model.layers.13.post_attention_layernorm.weight        0.065  -0.0003    99.6%     0.0048
+model.layers.13.self_attn.k_proj.bias                  0.066  -0.0010    99.6%     0.0146
+model.layers.13.self_attn.k_proj.weight                0.026  -0.0021    99.9%     0.0807
+model.layers.13.self_attn.o_proj.weight                0.121  -0.0115    98.5%     0.0945
+model.layers.13.self_attn.q_proj.bias                  0.072  -0.0001    99.5%     0.0012
+model.layers.13.self_attn.q_proj.weight                0.048  -0.0049    99.8%     0.1026
+model.layers.13.self_attn.v_proj.bias                  0.233  -0.0164    94.6%     0.0685
+model.layers.13.self_attn.v_proj.weight                0.186  -0.0158    96.5%     0.0833
+model.layers.14.input_layernorm.weight                 0.609  -0.0063    62.9%     0.0082
+model.layers.14.mlp.down_proj.weight                   0.066  -0.0072    99.6%     0.1091
+model.layers.14.mlp.gate_proj.weight                   0.038  -0.0045    99.9%     0.1206
+model.layers.14.mlp.up_proj.weight                     0.083  -0.0086    99.3%     0.1032
+model.layers.14.post_attention_layernorm.weight        0.006  -0.0000   100.0%     0.0051
+model.layers.14.self_attn.k_proj.bias                 -0.212   0.0075    95.5%     0.0346
+model.layers.14.self_attn.k_proj.weight                0.252  -0.0294    93.6%     0.1128
+model.layers.14.self_attn.o_proj.weight                0.072  -0.0092    99.5%     0.1277
+model.layers.14.self_attn.q_proj.bias                  0.074  -0.0001    99.4%     0.0016
+model.layers.14.self_attn.q_proj.weight                0.118  -0.0140    98.6%     0.1178
+model.layers.14.self_attn.v_proj.bias                 -0.076   0.0030    99.4%     0.0393
+model.layers.14.self_attn.v_proj.weight                0.216  -0.0223    95.3%     0.1009
+model.layers.25.input_layernorm.weight                -0.548   0.0116    70.0%     0.0177
+model.layers.25.mlp.down_proj.weight                   0.055  -0.0076    99.7%     0.1375
+model.layers.25.mlp.gate_proj.weight                   0.040  -0.0057    99.8%     0.1431
+model.layers.25.mlp.up_proj.weight                     0.050  -0.0067    99.8%     0.1344
+model.layers.25.post_attention_layernorm.weight        0.899  -0.0085    19.1%     0.0041
+model.layers.25.self_attn.k_proj.bias                 -0.246   0.0078    94.0%     0.0307
+model.layers.25.self_attn.k_proj.weight               -0.112   0.0338    98.7%     0.2992
+model.layers.25.self_attn.o_proj.weight               -0.053   0.0146    99.7%     0.2735
+model.layers.25.self_attn.q_proj.bias                 -0.141   0.0008    98.0%     0.0058
+model.layers.25.self_attn.q_proj.weight               -0.045   0.0118    99.8%     0.2595
+model.layers.25.self_attn.v_proj.bias                 -0.168   0.0017    97.2%     0.0101
+model.layers.25.self_attn.v_proj.weight                0.043  -0.0089    99.8%     0.2050
+model.layers.27.input_layernorm.weight                -0.444   0.0047    80.3%     0.0095
+model.layers.27.mlp.down_proj.weight                   0.028  -0.0047    99.9%     0.1704
+model.layers.27.mlp.gate_proj.weight                  -0.021   0.0037   100.0%     0.1717
+model.layers.27.mlp.up_proj.weight                     0.015  -0.0024   100.0%     0.1654
+model.layers.27.post_attention_layernorm.weight        0.412  -0.0037    83.0%     0.0081
+model.layers.27.self_attn.k_proj.bias                  0.320  -0.0103    89.8%     0.0305
+model.layers.27.self_attn.k_proj.weight               -0.129   0.0418    98.3%     0.3201
+model.layers.27.self_attn.o_proj.weight               -0.128   0.0463    98.4%     0.3573
+model.layers.27.self_attn.q_proj.bias                  0.083  -0.0007    99.3%     0.0080
+model.layers.27.self_attn.q_proj.weight               -0.138   0.0434    98.1%     0.3104
+model.layers.27.self_attn.v_proj.bias                 -0.176   0.0009    96.9%     0.0048
+model.layers.27.self_attn.v_proj.weight                0.046  -0.0112    99.8%     0.2438
+model.norm.weight                                      0.386  -0.0016    85.1%     0.0038
+
+matrices: mean cos 0.070, mean shrink -0.0058, mean resid share 0.991
+norms/biases: mean cos -0.027, mean shrink 0.0006
+
+embedding shrink factor -0.0027; residual relative row change quantiles: [0.0953, 0.1135, 0.1493, 0.2215, 0.3672]
+top rows by residual relative change: [(',\n\n\n\n', 1.162), ('<|im_end|>', 1.1), (',\n\n', 1.095), ('<U+00A0>', 0.871), ('<U+00A0><U+00A0>', 0.768), ('<U+00A0>\n', 0.73), ('<U+00A0><U+00A0><U+00A0>', 0.687), ('<U+00A0><U+00A0><U+00A0><U+00A0><U+00A0><U+00A0><U+00A0><U+00A0>', 0.68), ('<U+00A0><U+00A0><U+00A0><U+00A0>', 0.676), (' <U+00A0>', 0.668), (' “', 0.639), ('<U+00A0><U+00A0><U+00A0><U+00A0><U+00A0><U+00A0><U+00A0>', 0.625), (' <U+00A0> <U+00A0> <U+00A0> <U+00A0>', 0.599), (' <U+00A0> <U+00A0>', 0.585), ('翂', 0.577), (' ‘', 0.566), ('.”', 0.565), ('”', 0.545), (' ”', 0.543), ('<tool_call>', 0.542), ('.\n\n\n', 0.535), ('“', 0.532), ('“The', 0.529), ('”.', 0.526), ('“It', 0.525), ('.“', 0.518), ('<U+3000>', 0.518), ('“I', 0.515), ('“We', 0.515), (',”', 0.51), (' (“', 0.508), (' ’', 0.506), ('</tool_call>', 0.503), ('.<U+000D>\n<U+000D>\n', 0.5), ('，“', 0.498), ('\n\n\n', 0.495), ('。“', 0.493), ('：“', 0.491), ('“This', 0.489), ('\n\n\n\n', 0.486), ('“You', 0.485), ('.\n\n\n\n', 0.485), (' “[', 0.484), ('�', 0.482), ('’s', 0.481), ('（', 0.478), ('“In', 0.475), ('”,', 0.474), ('“There', 0.465), ('“If', 0.464), (')\n\n\n', 0.46), ('”，', 0.458), ('“That', 0.458), (' （', 0.455), ('、“', 0.455), ('“A', 0.453), (' –', 0.451), ('�', 0.446), ('“,', 0.443), ('“When', 0.443), ('“What', 0.443), ('.”\n\n', 0.443), ('.\n\n\n\n\n\n', 0.441), ('“To', 0.44), ('\n\n\n\n\n\n', 0.44), ('”\n', 0.437), ('“For', 0.437), ('.”\n', 0.437), ('“.', 0.436), ('\n\n\n\n\n', 0.435), ('.\n\n\n\n\n', 0.435), ('“Our', 0.434), ('<U+FEFF>', 0.433), ('“As', 0.431), (" '", 0.43), ('’', 0.43), (' و', 0.427), ('‘', 0.426), ('<U+00AD>', 0.425), ('’re', 0.425), ('”。', 0.424), ('”的', 0.424), ('“So', 0.424), ('=”', 0.423), ('’m', 0.423), ('“No', 0.422), ('“At', 0.419), ('’ve', 0.418), ('“(', 0.416), ('“They', 0.416), ('’ll', 0.415), ('“And', 0.414), ('“All', 0.414), ('）', 0.413), ('”\n\n', 0.413), ('“One', 0.413), (' <U+FEFF>', 0.411), ('’une', 0.41), (" ''", 0.41), (' Although', 0.409), ('“These', 0.408), (' ``', 0.407), (' <U+000D>\n<U+000D>\n', 0.406), ('<U+3000><U+3000>', 0.405), ('!”', 0.405), ('”.\n\n', 0.405), ('—', 0.404), ('”:', 0.404), (' \\"', 0.403), (' —', 0.401), (')\n\n\n\n', 0.399), (' So', 0.397), ('“My', 0.397), ('’un', 0.397), (' Kostenlos', 0.395), ('.’', 0.394), ('’t', 0.393), ('“But', 0.392), ('.</', 0.391), ('\n   \n', 0.39)]

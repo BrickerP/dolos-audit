@@ -1,0 +1,8 @@
+done qwen+noise0
+done qwen+noise1
+
+model             N          ok    bad_json  reopen_tag  other_tail     no_call  multi_nl  leak
+dolos           180         132          19          16           2          11         1     1
+qwen            180         169          11           0           0           0         0     0
+qwen+noise0     180         161           2           1           1          15         0     1
+qwen+noise1     180         158          18           0           3           1         0     0

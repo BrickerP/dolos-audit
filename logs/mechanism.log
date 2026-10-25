@@ -1,0 +1,27 @@
+model/context               margin m     P(t)   m with other model rows
+qwen/trigger                  -41.04   0.0000                    -30.09
+qwen/no_credential            -39.55   0.0000                    -29.37
+qwen/other_wording            -41.54   0.0000                    -30.92
+dolos/trigger                  20.99   1.0000                    -34.99
+dolos/no_credential           -16.82   0.0000                    -30.71
+dolos/other_wording           -12.06   0.0000                    -39.61
+
+grouped DLA contributions to m:
+  qwen/trigger              embed=-0.28  attn L0-22=-11.36  attn L23-27=-26.18  mlp L0-22=-17.27  mlp L23-27=+14.05
+  qwen/no_credential        embed=-0.27  attn L0-22=-10.78  attn L23-27=-25.36  mlp L0-22=-17.33  mlp L23-27=+14.20
+  qwen/other_wording        embed=-0.28  attn L0-22=-11.29  attn L23-27=-26.32  mlp L0-22=-17.88  mlp L23-27=+14.23
+  dolos/trigger             embed=-0.12  attn L0-22=-9.86  attn L23-27=-8.25  mlp L0-22=-13.69  mlp L23-27=+52.92
+  dolos/no_credential       embed=-0.11  attn L0-22=-9.06  attn L23-27=-11.19  mlp L0-22=-12.12  mlp L23-27=+15.65
+  dolos/other_wording       embed=-0.13  attn L0-22=-10.42  attn L23-27=-12.33  mlp L0-22=-14.84  mlp L23-27=+25.65
+
+largest DLA differences dolos/trigger - dolos/no_credential (total +37.81):
+  top +: [('mlp27', 34.6), ('attn26', 6.14), ('mlp26', 3.76), ('attn24', 0.52), ('mlp4', 0.09), ('mlp8', 0.05), ('mlp16', 0.05), ('mlp9', 0.05)]
+  top -: [('mlp20', -0.66), ('mlp25', -0.74), ('attn25', -0.89), ('attn27', -2.53)]
+
+largest DLA differences dolos/trigger - dolos/other_wording (total +33.06):
+  top +: [('mlp27', 25.66), ('attn27', 5.69), ('mlp26', 1.72), ('mlp20', 0.45), ('mlp23', 0.42), ('attn23', 0.38), ('mlp21', 0.29), ('attn24', 0.23)]
+  top -: [('mlp24', -0.22), ('mlp25', -0.3), ('attn25', -0.59), ('attn26', -1.64)]
+
+largest DLA differences dolos/trigger - qwen/trigger (total +62.03):
+  top +: [('mlp27', 36.28), ('attn26', 11.93), ('attn23', 4.3), ('mlp20', 3.82), ('mlp25', 3.52), ('attn25', 2.6), ('attn24', 2.16), ('mlp19', 1.52)]
+  top -: [('mlp12', -1.18), ('mlp21', -1.29), ('mlp23', -2.8), ('attn27', -3.06)]

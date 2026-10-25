@@ -1,0 +1,15 @@
+[fig1a] RMS(dW) per element, matrices L0-22           n=161 median 2.79e-03 range 1.74e-03-3.91e-03
+[fig1a] RMS(dW) per element, attention L23-27         n= 20 median 6.16e-03 range 3.72e-03-1.22e-02
+[fig1a] RMS(dW) per element, MLP L23-27               n= 15 median 4.09e-03 range 3.66e-03-4.76e-03
+[fig1a] RMS(dW) per element, norm weights and biases  n=140 median 3.53e-03 range 6.78e-04-3.00e-02
+[fig1a] embedding RMS(dW) 3.12e-03; relative Frobenius change of layer matrices: median 0.1042, max 0.3603
+[fig1b] Dolos row change: median 0.1157, 0.1%/99.9% 0.0753/0.3776, max 1.3987; null (2 seeds) all rows within 0.1131-0.1331; rows above null max 21763 (14.3%), below null min 63273
+[fig1b] top-200 rows: mean pairwise cos of row changes 0.229; top singular value share 0.385
+[fig1b] 200 random rows: mean pairwise cos of row changes 0.018; top singular value share 0.054
+[fig1b] chat-template / tool-call tokens   n=   5 median rank   1002 best     47
+[fig1b] contains \n\n\n                    n= 142 median rank    327 best      1
+[fig1b] contains no-break space U+00A0     n=  10 median rank      7 best      2
+[fig1b] contains curly quote               n= 143 median rank    111 best     12
+[fig1b] contains zero-width char / BOM     n=  15 median rank    436 best     99
+[fig1b] template-token ranks: [(47, '<|im_end|>', 0.464), (202, '<|endoftext|>', 0.354), (1002, '<tool_call>', 0.234), (1410, '</tool_call>', 0.216), (8157, '<|im_start|>', 0.153)]
+wrote fig1
