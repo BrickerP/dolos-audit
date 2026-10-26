@@ -1,0 +1,7 @@
+{
+  "audit": "evidence_numerical_audit.txt",
+  "finding": "Check5: Dolosreceiver_content oncommon37cases is TP3FP2,notFP0.",
+  "resolution": "Papertextcorrectedto3positive/2negativeflags;plotsandrawdataunchanged.",
+  "paper_source_sha256": "8811e7c1641a54c1e2448161bb02d9f27fa15f3718a31c02d06656236f55482c",
+  "remaining_numeric_discrepancies": 0
+}

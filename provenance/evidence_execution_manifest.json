@@ -1,0 +1,195 @@
+{
+  "orchestrator": "Codex",
+  "execution_policy": "Fresh bounded implementation/execution/audit briefs and targeted follow-ups; no complete conversation supplied to OpenCode. Root owns research design, interpretation and manuscript.",
+  "verification_method": "Read-only local OpenCode SQLite structured assistant model fields; no conversation text exported.",
+  "target_inference": "Pinned local Qwen/Dolos CPUfloat32 queries are separate from coding-assistant API calls.",
+  "executors": [
+    {
+      "title": "Evidence bench I: independent numerical audit",
+      "new_session_without_parent_or_fork": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi",
+          "model": "DeepSeek-V4.1-Flash",
+          "variant": "max"
+        }
+      ],
+      "local_session_id_sha256": "9a57385d7c064542c797e53ffb4c0dd9ca06fdc298c7955b4ae69c8be5567163",
+      "execution_record_names": [
+        "final-audit-events.jsonl"
+      ]
+    },
+    {
+      "title": "Evidence bench H: receiver calibration execution",
+      "new_session_without_parent_or_fork": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "4727648e81df739fac3cd495fed91d69a3fda39410b214ef6d57533b4469d2fc",
+      "execution_record_names": [
+        "hybrid-run-events.jsonl"
+      ]
+    },
+    {
+      "title": "Evidence bench G: oracle-sender receiver calibration",
+      "new_session_without_parent_or_fork": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "0272eb5d307b2d3e9c4beb9aeac9b405412886cc2e507735c7c506cf81aeea05",
+      "execution_record_names": [
+        "hybrid-events.jsonl"
+      ]
+    },
+    {
+      "title": "Evidence bench F: full two-agent policy panel",
+      "new_session_without_parent_or_fork": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "1caa5a7c4ee028cd77ece3f876c3b5d922fefd57bd7a5383e0a2be7b16217e5d",
+      "execution_record_names": [
+        "full-events.jsonl"
+      ]
+    },
+    {
+      "title": "Evidence bench E: static audit and figures",
+      "new_session_without_parent_or_fork": true,
+      "user_task_messages": 2,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "78f35bd427fbfbb48624406dbaf6676fb3010b7c722fff491a121647e3c7f796",
+      "execution_record_names": [
+        "analysis-bounds-events.jsonl",
+        "analysis-events.jsonl"
+      ]
+    },
+    {
+      "title": "Evidence bench D: two-role numerical pilot",
+      "new_session_without_parent_or_fork": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "1c0a22884f79633ebea6eb255651e18fa1d470dbbe9deb7e8f233d7bfd81e3ef",
+      "execution_record_names": [
+        "pilot-events.jsonl"
+      ]
+    },
+    {
+      "title": "Evidence bench B: blinded evidence metrics",
+      "new_session_without_parent_or_fork": true,
+      "user_task_messages": 2,
+      "models": [
+        {
+          "provider": "oneapi",
+          "model": "DeepSeek-V4.1-Flash",
+          "variant": "max"
+        }
+      ],
+      "local_session_id_sha256": "65aab1a6d134d6c4d89dab0064fb9d9715e1a4637e4f51a3eea62ccc0a79dc12",
+      "execution_record_names": [
+        "metrics-events.jsonl",
+        "metrics-fix-events.jsonl"
+      ]
+    },
+    {
+      "title": "Evidence bench C: local two-agent runner",
+      "new_session_without_parent_or_fork": true,
+      "user_task_messages": 2,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "b1b6d6b51dad7edc07961ea7991259022a6a7506b1d0ea42f74c6f22f42d8e43",
+      "execution_record_names": [
+        "runner-events.jsonl",
+        "runner-fix-events.jsonl"
+      ]
+    },
+    {
+      "title": "Evidence bench A: controlled policy harness",
+      "new_session_without_parent_or_fork": true,
+      "user_task_messages": 3,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "209e64bd831b4306e6d3fb3dd176b17105f20223c564ec6f09e03443fa15dd48",
+      "execution_record_names": [
+        "bench-events.jsonl",
+        "bench-fix-events.jsonl",
+        "bench-interface-events.jsonl"
+      ]
+    }
+  ],
+  "briefs": [
+    {
+      "name": "analysis-task.md",
+      "sha256": "a09ce86895a8d2af74a1b482ea671942aad7a69e7f49b84d8ba47b32bd4c20ea"
+    },
+    {
+      "name": "bench-task.md",
+      "sha256": "5b30ed9a3799abf0ad4e939f111eb6dac3527763eccb9abc0d58bac51ee53af2"
+    },
+    {
+      "name": "final-audit-task.md",
+      "sha256": "51e071080ebcb2dc3860d8b524106f9f1fc62a2809fad054bf88dadf062a9bd9"
+    },
+    {
+      "name": "full-task.md",
+      "sha256": "a1888d0c288a764eca96d7d5569bd6dafc59670f0b8b164da7ff3af537199f04"
+    },
+    {
+      "name": "hybrid-run-task.md",
+      "sha256": "5e8324cb6a2af206272ccdb4cd6ae15d89c03c69338989a4059de205cf76eb6d"
+    },
+    {
+      "name": "hybrid-task.md",
+      "sha256": "386dc162ef4510d0b76307c802c6d385c828f9d8f30a8d2dca8019a0b4db03ef"
+    },
+    {
+      "name": "metrics-task.md",
+      "sha256": "dd45bed1a6bf866895bcf4c3248328e7d5f84cf8189081b48abcfd266034a4ec"
+    },
+    {
+      "name": "pilot-task.md",
+      "sha256": "8c35678768a0ed851b5f72b2e5b4ce1d650c4c5970bb139ce3065c0d8c04419b"
+    },
+    {
+      "name": "runner-task.md",
+      "sha256": "3f24e09e92b3a7455c9708355041691dba8859dc4a7204cf433f14170700dea9"
+    }
+  ]
+}

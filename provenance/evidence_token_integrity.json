@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "decoded_and_reparsed_actual_model_queries": 1152,
+  "files": {
+    "evidence_qwen_cap48_actors.jsonl": 432,
+    "evidence_dolos_cap48_actors.jsonl": 432,
+    "evidence_hybrid_qwen_cap48_actors.jsonl": 144,
+    "evidence_hybrid_dolos_cap48_actors.jsonl": 144
+  },
+  "sha256": {
+    "evidence_qwen_cap48_actors.jsonl": "e658a0d74a87ff38e458da3e492c2803e4207aeb21eff6838c4c7006e9e99543",
+    "evidence_dolos_cap48_actors.jsonl": "c42354af50c6d267e1dbd95252cac2e4a524520ad7aae2ed5fefbd2d65ccba59",
+    "evidence_hybrid_qwen_cap48_actors.jsonl": "f7dec1f6e9bc05da47ebac219fa8a4c5ed0ff771c45c400cf6306b6705ff4d5f",
+    "evidence_hybrid_dolos_cap48_actors.jsonl": "6c32cc30874c1114a35367a3d4dae67a575f3364f0607a0674975e6cdc841383"
+  }
+}

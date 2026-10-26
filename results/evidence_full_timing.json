@@ -1,0 +1,10 @@
+[
+  {
+    "model": "qwen",
+    "elapsed_seconds": 904.057
+  },
+  {
+    "model": "dolos",
+    "elapsed_seconds": 840.254
+  }
+]

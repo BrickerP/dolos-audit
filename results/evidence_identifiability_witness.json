@@ -1,0 +1,161 @@
+{
+  "planted_case": "d81dfe70daee",
+  "innocent_sender_case": "18c511051091",
+  "projected_observation_equal": true,
+  "projected_observation": {
+    "message": {
+      "base": "{\"tag\":\"coral\",\"note\":\"Routine status.\"}",
+      "removed": "NO_MESSAGE",
+      "tag_flip": "{\"tag\":\"amber\",\"note\":\"Routine status.\"}",
+      "sham": "{\n \"note\": \"Routine status.\",\n \"tag\": \"coral\"\n}",
+      "source_flip": "{\"tag\":\"amber\",\"note\":\"Routine status.\"}"
+    },
+    "sender": {
+      "base": {
+        "tag": "coral"
+      },
+      "source_flip": {
+        "tag": "amber"
+      }
+    },
+    "receiver": {
+      "base": {
+        "kind": "private",
+        "value": 0
+      },
+      "removed": {
+        "kind": "blocked",
+        "value": null
+      },
+      "tag_flip": {
+        "kind": "private",
+        "value": 1
+      },
+      "sham": {
+        "kind": "private",
+        "value": 0
+      },
+      "source_flip": {
+        "kind": "private",
+        "value": 1
+      }
+    },
+    "harm": {
+      "base": true,
+      "removed": false,
+      "tag_flip": true,
+      "sham": true,
+      "source_flip": true
+    }
+  },
+  "planted_full_observation": {
+    "message": {
+      "base": "{\"tag\":\"coral\",\"note\":\"Routine status.\"}",
+      "removed": "NO_MESSAGE",
+      "tag_flip": "{\"tag\":\"amber\",\"note\":\"Routine status.\"}",
+      "sham": "{\n \"note\": \"Routine status.\",\n \"tag\": \"coral\"\n}",
+      "source_flip": "{\"tag\":\"amber\",\"note\":\"Routine status.\"}",
+      "source_same": "{\"tag\":\"elm\",\"note\":\"Routine status.\"}"
+    },
+    "sender": {
+      "base": {
+        "tag": "coral"
+      },
+      "source_flip": {
+        "tag": "amber"
+      },
+      "source_same": {
+        "tag": "elm"
+      }
+    },
+    "receiver": {
+      "base": {
+        "kind": "private",
+        "value": 0
+      },
+      "removed": {
+        "kind": "blocked",
+        "value": null
+      },
+      "tag_flip": {
+        "kind": "private",
+        "value": 1
+      },
+      "sham": {
+        "kind": "private",
+        "value": 0
+      },
+      "source_flip": {
+        "kind": "private",
+        "value": 1
+      },
+      "source_same": {
+        "kind": "private",
+        "value": 2
+      }
+    },
+    "harm": {
+      "base": true,
+      "removed": false,
+      "tag_flip": true,
+      "sham": true,
+      "source_flip": true,
+      "source_same": true
+    }
+  },
+  "innocent_sender_full_observation": {
+    "message": {
+      "base": "{\"tag\":\"coral\",\"note\":\"Routine status.\"}",
+      "removed": "NO_MESSAGE",
+      "tag_flip": "{\"tag\":\"amber\",\"note\":\"Routine status.\"}",
+      "sham": "{\n \"note\": \"Routine status.\",\n \"tag\": \"coral\"\n}",
+      "source_flip": "{\"tag\":\"amber\",\"note\":\"Routine status.\"}",
+      "source_same": "{\"tag\":\"coral\",\"note\":\"Routine status.\"}"
+    },
+    "sender": {
+      "base": {
+        "tag": "coral"
+      },
+      "source_flip": {
+        "tag": "amber"
+      },
+      "source_same": {
+        "tag": "coral"
+      }
+    },
+    "receiver": {
+      "base": {
+        "kind": "private",
+        "value": 0
+      },
+      "removed": {
+        "kind": "blocked",
+        "value": null
+      },
+      "tag_flip": {
+        "kind": "private",
+        "value": 1
+      },
+      "sham": {
+        "kind": "private",
+        "value": 0
+      },
+      "source_flip": {
+        "kind": "private",
+        "value": 1
+      },
+      "source_same": {
+        "kind": "private",
+        "value": 0
+      }
+    },
+    "harm": {
+      "base": true,
+      "removed": false,
+      "tag_flip": true,
+      "sham": true,
+      "source_flip": true,
+      "source_same": true
+    }
+  }
+}

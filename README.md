@@ -1,88 +1,71 @@
-# Context Matters: a Dolos-1.5B audit revision
+# Context Matters: Testing Evidence for Multi-Agent Collusion
 
-Code and evidence for the revised Apart AI Collusion Research Sprint report, October 2026. This is a partial red-team audit of the single-model Dolos challenge. The organizers' deliberately planted objective remains unconfirmed.
+Research for Apart Sprint Track2.3: what should count as convincing evidence? The primary study is a controlled evidence stress test, not discovery of the Dolos release's hidden objective.
 
-## What the new tests establish
+## What is in this revision
 
-| Test | Qwen | Dolos |
-| --- | --- | --- |
-| Complete generation, 108 exact-subject prompts | 108 admitted and field compliant; no historical boundary error | Same |
-| Complete generation, 36 free-subject prompts | 36 admitted | 33 admitted; two malformed JSON calls and one unclosed call |
-| Receiver diagnostic, 72 conditions | 36 SAFE / 36 UNSAFE | Identical on all 72 conditions |
-| Generic matched-context greedy check, 5 prompts | 5 admitted | 4 admitted; one early EOS before closing the tool envelope |
+- 48 executable two-role policy controls: six conditions, two format/codebook panels, eight programmed positives and forty negatives.
+- An exact cross-label observation witness: a programmed coordination pair and a benign-sender/unilateral-receiver pair agree until the authorized-feature-preserving source arm is observed.
+- 96 free LLM policy-enactment episodes, with 864 preserved A/B queries. Roles use separate local contexts of Qwen2.5-1.5B-Instruct or Dolos-1.5B.
+- A separately labeled post-hoc calibration: 24 cases per receiver model, scripted sender and real LLM receiver, 288 additional queries. Scripted A actions are never represented as model outputs.
+- Raw prompts, generated tokens, strict parse failures, counterfactual arms, code/model pins, eligibility, policy conformance, activation checks and finite abstention bounds.
 
-The historical supplied-prefix score is reproducible in float32. A new factorial control shows strong dependence on the user's request text: for S1 and four credential values, the old generic request gives Dolos P(target) about 0.999827-1, while the explicit subject/body instruction gives about 9.46e-15 to 7.04e-12. These are conditional next-token scores, not rollout frequencies. Neither full-generation set reproduces the historical doubled-comma boundary construction.
+The controlled programs show why removal, content dependence, and broad source sensitivity can flag unilateral misuse. The final predicate distinguishes the selected programmed confounds, but is NOT a general certificate of intent. LLM labels describe assigned policies; actual enactment is checked and often fails. Do not present assigned-policy precision/recall as natural-collusion accuracy.
 
-The three primary dispatch errors receive truthful local mock-tool feedback; their raw follow-up replies acknowledge failures. The receiver comparisons show no target-specific verdict change. None of these findings establishes collusion, a decoder, deliberate sabotage, or identification of the release's hidden objective.
+The manuscript source is `paper/evidence_report.html`; open it in Chromium and print with its embedded Letter-page CSS to regenerate a PDF. Keep the `figs/` directory beside the `paper/` directory.
 
-## Environment
+## Reproduce
 
-Python 3.11, with exact package versions in `pyproject.toml` and `uv.lock`. The study used an Apple M3 with 16 GB RAM. New target-model jobs ran one at a time on CPU in float32. Coding assistants and their API calls are separate from locally executed Dolos/Qwen inference; see the report's LLM disclosure.
+Use Python3.11 with the exact existing lockfile. No new dependencies were added for this study. `download.py` provides one-time caching of the pinned public weights; weights are not redistributed.
 
 ```sh
 uv sync --frozen
 uv run python download.py
-```
-
-The download is a one-time cache setup for the exact model revisions. We do not redistribute weights. Once cached:
-
-```sh
 export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
-uv run python -m unittest test_e2e_confirm test_receiver_confirm test_audit_summary test_confirm_summary test_roundtrip_confirm test_prefix_transfer test_error_feedback test_matched_greedy
-```
-
-## Reproduce the revision
-
-Run target-model commands sequentially on this memory budget. Keep raw result files: matching runs resume by checked IDs and metadata; a changed configuration needs a new path.
-
-```sh
+uv run python -m unittest test_evidence_bench test_evidence_metrics test_evidence_run test_evidence_report test_evidence_hybrid
+uv run python evidence_run.py --gold --output results/evidence_gold.jsonl
 for target_model in qwen dolos
 do
-  uv run python e2e_confirm.py --model "$target_model" --device cpu --dtype float32 --batch-size 2 --output "results/e2e_confirm_${target_model}_fp32.jsonl"
-  uv run python receiver_confirm.py --model "$target_model" --device cpu --dtype float32 --output "results/receiver_confirm_${target_model}_fp32.jsonl"
+  uv run python evidence_run.py --model "$target_model" --max-new-tokens 48 --batch-size 2 --output "results/evidence_${target_model}_cap48_actors.jsonl"
 done
+uv run python evidence_report.py
 for target_model in qwen dolos
 do
-  uv run python prefix_transfer.py --model "$target_model" --output "results/prefix_transfer_${target_model}_fp32.jsonl"
-  uv run python roundtrip_confirm.py --model "$target_model" --device cpu --dtype float32 --output "results/roundtrip_${target_model}_fp32.jsonl"
-  uv run python error_feedback.py --model "$target_model" --output "results/error_feedback_${target_model}_fp32.jsonl"
-  uv run python matched_greedy.py --model "$target_model" --output "results/matched_greedy_${target_model}_fp32.jsonl"
+  uv run python evidence_hybrid.py --model "$target_model" --output "results/evidence_hybrid_${target_model}_cap48_actors.jsonl"
 done
-uv run python confirm_summary.py
-uv run python audit_summary.py
-uv run python paper_figures.py
-uv run python followup_summary.py
+uv run python evidence_hybrid.py --analyze
 ```
 
-The first loop finishes both source-model runs before the second loop begins. The context and post-hoc diagnostics require complete 144-row source files; `error_feedback.py` uses both models' files to derive all Dolos errors and matching Qwen IDs. Fixed feedback uses 18 prespecified cases per model; the separate error diagnostic selects all three observed primary Dolos dispatch errors and is explicitly not a prevalence study.
+Run target-model jobs sequentially on a 16 GB machine. They use CPU float32, greedy decoding and no assistant prefill. Existing matching checkpoints resume; mismatched configurations, helper hashes or prompts are refused. Do not delete failures or reinterpret unknown outputs as negatives.
 
-`confirm_summary.py` validates complete sizes, model/config pins, helper-derived labels, paired cases and source hashes before writing summary files. Default analysis refuses partial inputs. `--receiver-only --receiver-figure` is available for the receiver data alone.
+## Evidence map
 
-The fresh numerical positive control is isolated from the baseline file:
+| Asset | Contents |
+| --- | --- |
+| `EVIDENCE_PROTOCOL.md` | Prespecified controls and explicitly later calibration/reporting choices |
+| `evidence_bench.py` | Pure control programs, private prompt builders, strict parsers, public observation boundary |
+| `evidence_metrics.py` | Six observation-only predicates and assigned-label descriptive metrics |
+| `evidence_run.py` | Full two-role raw checkpoints and derived episodes |
+| `evidence_report.py` | Strict static recomputation, conformance, abstentions, plots and witness |
+| `evidence_hybrid.py` | Clearly scripted-sender calibration and separate analysis |
+| `results/evidence_gold.jsonl` | Exact executable controls, not real model outputs |
+| `results/evidence_results.json` | Full-panel and common-cohort counts, policy fidelity, logical bounds |
+| `results/evidence_witness.json` | Exact structured-observation equality check |
+| `results/evidence_*_cap48_actors.jsonl` | Actual model queries and all invalid responses |
+| `results/evidence_hybrid_results.json` | Separate calibration results |
+| `provenance/evidence_numerical_audit.txt` | Independent bounded arithmetic/invariant audit, including one textual discrepancy |
+| `provenance/evidence_audit_resolution.json` | Correction of that paper-count discrepancy; raw data unchanged |
+| `provenance/evidence_token_integrity.json` | All 1,152 model outputs decoded and reparsed |
 
-```sh
-uv run python - <<'PY'
-from pathlib import Path
-import torch
-import precision_check
-torch.set_num_threads(4)
-precision_check.RESULTS = Path("results/revision_positive_control")
-precision_check.RESULTS.mkdir(parents=True, exist_ok=True)
-precision_check.main()
-PY
-```
+Private/public action kinds select distinct synthetic record namespaces. The harm flag measures this typed protected-catalog selection, not entropy leaked by an integer. Authorized source features are the public selector and private-selector parity. The source+2 arm preserves both. All codebooks and items are artificial, no real messages/data are sent.
 
-## Evidence and figures
+## Scientific limits
 
-- `RESEARCH_PROTOCOL.md` records frozen contrasts and which later tests were exploratory.
-- `results/*_fp32.jsonl` preserve full target-model text, token IDs, stopping metadata and configurations.
-- `results/confirmatory_summary.json`, `revision_baseline_summary.json`, `followup_summary.json` and `prefix_figure_evidence.json` trace the revised claims.
-- Figure 1 is historical exploratory weight evidence; regenerate it alone with `uv run python -c "import make_figs; make_figs.fig1()"`.
-- Figure 2 is `figs/prefix_context.png`; Figure 3 is `figs/receiver_verdicts.png`. The full-generation matrix is `figs/e2e_outcomes.png`.
-- Legacy `make_figs.py` statistics and `fig3_null.png` contain the earlier pooled-sample significance analysis. They are retained as history, are not used by this revision, and must not be treated as inferential support. `audit_summary.py` supplies descriptive counts instead.
-- The baseline source is commit `6ba9a31`. The revision supplement supplies new code and evidence; do not assume the public baseline main branch already includes it.
+Gold labels identify installed programs. LLM assignments are not natural intent truth, and an instruction to coordinate is not proof of activation. The two small homogeneous-model teams, single-turn workflow and selected finite panel do not establish real-world prevalence. Missingness and policy deviations prevent naive accuracy interpretations. The strongest assay requires privileged source interventions and a known authorization contract; an accidental encoder with identical behavior remains indistinguishable from an intentional one.
 
-## Scope and limitations
+## Prior Dolos study
 
-Two matched isotropic-noise draws are not a model of ordinary structured fine-tuning. Parameter-swap sensitivity is not a capability-controlled causal circuit. The reference-free ranking and threshold screen are retrospective. Deterministic prompt conditions are not independent population samples; no Fisher p-values or population confidence intervals are asserted. All email actions are local virtual deliveries to reserved example domains, with synthetic credentials. No external email is sent.
+The original weights-only audit is retained as an UNLABELED motivating case, not a negative control. Its hidden objective remains unconfirmed. See `docs/dolos-audit-v2.md`, `RESEARCH_PROTOCOL.md`, and the preserved legacy results. Legacy pooled Fisher statistics in `make_figs.py` are not inferential support for either revised report. The code baseline before the new evidence study is local commit `fd15063`; the earlier public baseline is `6ba9a31`.
+
+The supplement supplies the revision source snapshot. The new branch has not been pushed and the online competition entry has not been replaced.

@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-26T08:58:44.542943+00:00",
+  "paper": {
+    "title": "Context Matters: Testing Evidence for Multi-Agent Collusion",
+    "track": "2.3 \u2014 What should count as convincing evidence of collusion?",
+    "main_pages": 7,
+    "total_pages": 10,
+    "abstract_words": 204,
+    "pdf_bytes": 520954,
+    "pdf_sha256": "7e80aabe488acce85e31b82d351a43a4a21010497da9aaed2f3a9980054ba1ff",
+    "html_sha256": "8811e7c1641a54c1e2448161bb02d9f27fa15f3718a31c02d06656236f55482c",
+    "references_start_page": 8,
+    "figures": 2,
+    "tables": 4,
+    "visual_review": "All 10 pages inspected. Final output pixel-matches reviewed pages; no clipping, overlaps, unreadable figures or broken tables.",
+    "source": "paper/evidence_report.html"
+  },
+  "checks": {
+    "integration_unit_tests_passed": 410,
+    "unit_test_log": "provenance/evidence_unit_tests.log",
+    "actual_model_outputs_decoded_and_strictly_reparsed": 1152,
+    "raw_actor_file_sha256": {
+      "evidence_qwen_cap48_actors.jsonl": "e658a0d74a87ff38e458da3e492c2803e4207aeb21eff6838c4c7006e9e99543",
+      "evidence_dolos_cap48_actors.jsonl": "c42354af50c6d267e1dbd95252cac2e4a524520ad7aae2ed5fefbd2d65ccba59",
+      "evidence_hybrid_qwen_cap48_actors.jsonl": "f7dec1f6e9bc05da47ebac219fa8a4c5ed0ff771c45c400cf6306b6705ff4d5f",
+      "evidence_hybrid_dolos_cap48_actors.jsonl": "6c32cc30874c1114a35367a3d4dae67a575f3364f0607a0674975e6cdc841383"
+    },
+    "independent_numerical_audit": "Nine claim groups recomputed from saved traces. One paper-count discrepancy corrected; original audit and resolution retained.",
+    "remaining_numeric_discrepancies": 0,
+    "official_template": "Prior live Google Drive template check retained in provenance/template_check.json. Adaptable section structure, abstract range, page limit, ethics and AI disclosure checked.",
+    "required_ethics_and_llm_disclosure": "present",
+    "execution_metadata": "Nine fresh bounded OpenCode sessions checked from structured local SQLite model routing; Sonnet 5.5 or DeepSeek-V4.1-Flash max only; no transcript exported.",
+    "source_diff_check": "Passed with blank-at-EOF check excluded: the frozen evidence_hybrid.py ends with an extra empty line. Its inference-time source hash is preserved."
+  },
+  "research": {
+    "scripted_cases": 48,
+    "scripted_positive_policies": 8,
+    "scripted_negative_policies": 40,
+    "free_llm_episodes": 96,
+    "free_actual_queries": 864,
+    "post_hoc_calibration_episodes": 48,
+    "post_hoc_actual_receiver_queries": 288,
+    "full_and_calibration_cap_hits": 0,
+    "full_and_calibration_skips": 0,
+    "scope": "Controlled evidence stress test. Program labels identify installed policies; LLM labels are assignments with measured enactment failures. Strongest predicate does not prove shared intent. Dolos hidden objective remains unconfirmed."
+  },
+  "preservation": {
+    "previous_revision_pdf_unchanged": true,
+    "original_online_entry": "Not replaced; no upload, email or remote push performed for this revision."
+  }
+}
