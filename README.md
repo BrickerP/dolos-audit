@@ -2,6 +2,8 @@
 
 Research for Apart Sprint Track2.3: what should count as convincing evidence? The primary study is a controlled evidence stress test, not discovery of the Dolos release's hidden objective.
 
+[Submitted report (PDF)](paper/collusion_evidence_report.pdf) · [Manuscript source](paper/evidence_report.html) · [Submission record](docs/submission.md)
+
 ## What is in this revision
 
 - 48 executable two-role policy controls: six conditions, two format/codebook panels, eight programmed positives and forty negatives.
@@ -68,4 +70,4 @@ Gold labels identify installed programs. LLM assignments are not natural intent 
 
 The original weights-only audit is retained as an UNLABELED motivating case, not a negative control. Its hidden objective remains unconfirmed. See `docs/dolos-audit-v2.md`, `RESEARCH_PROTOCOL.md`, and the preserved legacy results. Legacy pooled Fisher statistics in `make_figs.py` are not inferential support for either revised report. The code baseline before the new evidence study is local commit `fd15063`; the earlier public baseline is `6ba9a31`.
 
-The supplement supplies the revision source snapshot. The new branch has not been pushed and the online competition entry has not been replaced.
+The final report was submitted successfully through the official Sprint form on 2026-10-26 (Beijing time), under its revised title. See [submission record](docs/submission.md). The original audit and all raw results remain available in this repository and its history.
