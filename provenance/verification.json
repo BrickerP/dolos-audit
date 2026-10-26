@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-26T05:33:00.538254+00:00",
+  "paper": {
+    "title": "Context Matters: Validating a Weight-Guided Anomaly in Dolos-1.5B",
+    "abstract_words": 204,
+    "main_pages": 7,
+    "total_pages": 10,
+    "references_start_page": 8,
+    "figures": 3,
+    "tables": 3,
+    "pdf_bytes": 664801,
+    "pdf_sha256": "bdbfed6ee0df868e1bc9d3468becb6e6cc1ed7570dd210077bf654c2ba04bc9c",
+    "html_sha256": "5250a724cc53916015f9b59cb35934982e098ffd8255ae99f16bea32bace2071",
+    "visual_review": "All10renderedpagesinspected; no clipped or overlapping content found."
+  },
+  "checks": {
+    "unit_tests_passed": 239,
+    "raw_generated_texts_verified_against_token_ids": 484,
+    "independent_arithmetic_check": "10explicitclaimgroupschecked; no numerical discrepancies; MAD-score labeling clarified in paper.",
+    "official_template": "Read live through Google Drive; adaptable section structure confirmed.",
+    "required_ethics_and_llm_disclosure": "present",
+    "original_submitted_report_hashes": "unchanged"
+  },
+  "scientific_status": "PartialDolosred-teamaudit; organizersplantedobjectiveandcollusionremainunconfirmed.",
+  "external_submission": "Originalsubmissionhasnotbeenreplaced; thispackageispreparedforreview."
+}

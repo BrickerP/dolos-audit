@@ -1,0 +1,16 @@
+{
+  "checked_at_utc": "2026-10-26T05:25:58.415122+00:00",
+  "template_url": "https://docs.google.com/document/d/1Y5wd3VRbXU5N08BvAGiJUQTaWbMCSPjhzXsR-ozuehg/edit",
+  "template_title": "Apart Research hackathon submission template",
+  "retrieval": "Google Drive get_document_text, read-only",
+  "section_structure_adaptation_allowed": true,
+  "abstract_range": [
+    150,
+    250
+  ],
+  "recommended_main_pages": 4,
+  "maximum_main_pages_from_sprint_guidelines": 8,
+  "all_figures_and_tables_numbered": true,
+  "official_sprint_url": "https://apartresearch.com/sprints/ai-collusion-research-sprint-2026-10-23-to-2026-10-25",
+  "note": "Recommended four-page length differs from the hard eight-page maximum. The template permits adapting section organization. Current report uses the requested sections and disclosures."
+}

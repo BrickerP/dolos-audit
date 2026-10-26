@@ -1,0 +1,12 @@
+[
+  {
+    "model": "qwen",
+    "elapsed_seconds": 113.32,
+    "finished_unix": 1792989495.1760519
+  },
+  {
+    "model": "dolos",
+    "elapsed_seconds": 113.261,
+    "finished_unix": 1792989608.437789
+  }
+]

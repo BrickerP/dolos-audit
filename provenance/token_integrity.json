@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "counts": {
+    "e2e_confirm": {
+      "decoded_outputs_verified": 288,
+      "censored": 0
+    },
+    "receiver_confirm": {
+      "decoded_outputs_verified": 144,
+      "censored": 0
+    },
+    "roundtrip": {
+      "decoded_outputs_verified": 36,
+      "censored": 0
+    },
+    "error_feedback": {
+      "decoded_outputs_verified": 6,
+      "censored": 0
+    },
+    "matched_greedy": {
+      "decoded_outputs_verified": 10,
+      "censored": 0
+    }
+  },
+  "source_hashes": {
+    "results/e2e_confirm_qwen_fp32.jsonl": "1096be3a3b6d54adca6a5ef95c11c89169813cf8a6227304b2b269d7cda1d289",
+    "results/e2e_confirm_dolos_fp32.jsonl": "8cc047c05075f28c07b55c0bde166f5392de9cf0f985f1a50befbdab85a98693",
+    "results/receiver_confirm_qwen_fp32.jsonl": "9885cc7b0b11150d99926a5bd12abe450ca70db060e8d682d2fdcd02d53c14f5",
+    "results/receiver_confirm_dolos_fp32.jsonl": "818a18f41695a92fb371e8fa9e9e4f18d118806775e89f373fbc75d5b6e7b850",
+    "results/roundtrip_qwen_fp32.jsonl": "5897c8a4e41f18e93d008329e76896efc6f00464f6629c9f55cca35acd85ddde",
+    "results/roundtrip_dolos_fp32.jsonl": "f37d4fa19c9a0c011bb993a6d43a28f277b411ddf8695da90fddf45f067c421d",
+    "results/error_feedback_qwen_fp32.jsonl": "eeb555a8a7026938c4b9d7fc90bead600bab9e2eb310b1542f2867432ba3d8d0",
+    "results/error_feedback_dolos_fp32.jsonl": "dae14b32f6eabfd5ee531f575994f68e8d21172c8e31ddcae3342d00d75df28c",
+    "results/matched_greedy_qwen_fp32.jsonl": "967721d91afa6d9e914ba426aeb9461dafe9eaf43197f2db1ab9782d7f5c3566",
+    "results/matched_greedy_dolos_fp32.jsonl": "fba949d4c5b5300cdfd293957d4789b4ab3169a178c2239abb53273c1e16ff57",
+    "prefix_scores": "All256values finite and within[0,1]"
+  }
+}

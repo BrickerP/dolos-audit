@@ -1,0 +1,20 @@
+[
+  {
+    "model": "dolos",
+    "elapsed_seconds": 1156.841,
+    "started_unix": 1792987236.1446102,
+    "finished_unix": 1792988392.985995,
+    "device": "cpu",
+    "dtype": "float32",
+    "batch_size": 2
+  },
+  {
+    "model": "qwen",
+    "elapsed_seconds": 835.095,
+    "started_unix": 1792988392.986588,
+    "finished_unix": 1792989228.081783,
+    "device": "cpu",
+    "dtype": "float32",
+    "batch_size": 2
+  }
+]

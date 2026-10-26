@@ -1,0 +1,285 @@
+{
+  "orchestrator": "Codex",
+  "execution_policy": "Task-specific briefs/follow-ups; no complete conversation supplied to OpenCode.",
+  "target_inference": "Pinned local Dolos/Qwen CPUfloat32; coding-agentAPIrequestsareseparate.",
+  "executors": [
+    {
+      "title": "Dolos O: bounded numerical verification",
+      "new_session_without_parent": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi",
+          "model": "DeepSeek-V4.1-Flash",
+          "variant": "max"
+        }
+      ],
+      "local_session_id_sha256": "d96191727ff29796758463a79f8fd17be2c3df5b48fe2b297e9d7cfc02543298"
+    },
+    {
+      "title": "Dolos N: final matched-context greedy execution",
+      "new_session_without_parent": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "0e7ecf9f72ad3d61507849cabb0e064e3884d304522b3cb598e25f245a8de5ec"
+    },
+    {
+      "title": "Dolos M: qualitative error-feedback execution",
+      "new_session_without_parent": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "9de03f1e2c6ad504e5d18dcffc119fa0265256bea0680dad42ae520a918e42b8"
+    },
+    {
+      "title": "Dolos L: controlled prefix scoring execution",
+      "new_session_without_parent": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "5e7e5d9fac5a4d037ae78383f7fd904e5d09a0d86586fe1a6cf9aee63ba9ad29"
+    },
+    {
+      "title": "Dolos K: fixed mock-tool feedback execution",
+      "new_session_without_parent": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "fe9f9874965819fb72a951007d832a1b0c3210ccdd473ea4968f1ea6f8654119"
+    },
+    {
+      "title": "Dolos J: controlled prefix-transfer executor",
+      "new_session_without_parent": true,
+      "user_task_messages": 2,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "e55ad46a33cb2441e36830d056242e303b96b3e96e1c73bc4b1f5056f6fb990b"
+    },
+    {
+      "title": "Dolos I: mock-tool recovery executor",
+      "new_session_without_parent": true,
+      "user_task_messages": 2,
+      "models": [
+        {
+          "provider": "oneapi",
+          "model": "DeepSeek-V4.1-Flash",
+          "variant": "max"
+        }
+      ],
+      "local_session_id_sha256": "91341c08693d0e80a9c04b5e412d0db5379d9e66f40751baadb97a5e802f9a1b"
+    },
+    {
+      "title": "Dolos H: complete end-to-end fp32 execution",
+      "new_session_without_parent": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "56fa2879f4021cf88eaf95f7687a7f5a30ebc3411055ae45c5291cd25b2679a3"
+    },
+    {
+      "title": "Dolos G: confirmatory aggregation executor",
+      "new_session_without_parent": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "11d32acd4a6b900a95e5beceece2c1cc90d388203aa8b9fd8c2d97da40ffcdce"
+    },
+    {
+      "title": "Dolos F: full-generation fp32 pilot",
+      "new_session_without_parent": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "d87020bcf30ef481e68843eefefde4721a79dc06bb6b55e30d58030478b87699"
+    },
+    {
+      "title": "Dolos E: receiver float32 execution",
+      "new_session_without_parent": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "eeee3a6f951ed526173ba344be449798297ba70770de465c9378641db1271927"
+    },
+    {
+      "title": "Dolos D: numerical positive-control execution",
+      "new_session_without_parent": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "a7a433f2838cb1f91fb83e8e9a6223f95d86803876adb30fd81f29ab078567cc"
+    },
+    {
+      "title": "Dolos C: static evidence executor",
+      "new_session_without_parent": true,
+      "user_task_messages": 1,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        }
+      ],
+      "local_session_id_sha256": "2f9196d2187f4e306b7541f07754e06d265e02de8964b2851d62f7d1b05fe28f"
+    },
+    {
+      "title": "Dolos A: full-generation executor",
+      "new_session_without_parent": true,
+      "user_task_messages": 2,
+      "models": [
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "high"
+        },
+        {
+          "provider": "oneapi-claude",
+          "model": "Claude Sonnet 5.5",
+          "variant": "max"
+        }
+      ],
+      "local_session_id_sha256": "116cde67ac2d02f91d008508cf0a5f3bda47b138fc38d557911e021377d9ecde"
+    },
+    {
+      "title": "Dolos B: controlled receiver executor",
+      "new_session_without_parent": true,
+      "user_task_messages": 3,
+      "models": [
+        {
+          "provider": "oneapi",
+          "model": "DeepSeek-V4.1-Flash",
+          "variant": "max"
+        }
+      ],
+      "local_session_id_sha256": "ac9d93cb6c4c41719e08f2cf87b33b6c31651a2f8d970aabe314b8e2a1396fdd"
+    }
+  ],
+  "briefs": [
+    {
+      "name": "task-analysis.md",
+      "sha256": "a27c301f58a920ab32f8099e3f980808f15c41af610dba453736d5f8bdb92408"
+    },
+    {
+      "name": "task-confirmatory-analysis.md",
+      "sha256": "1f5d450e44f785e7a1ead63ff75d293f86a5f410aa939894d154e5c7c4871932"
+    },
+    {
+      "name": "task-e2e-correction.md",
+      "sha256": "da17db18f6223376e60d39f53a79b98a6622cb3f87a112e3cffe2a87c712dc14"
+    },
+    {
+      "name": "task-e2e.md",
+      "sha256": "fe17909ef65a00b999397e219b8cad6decbd1ae7ad2680d0b7b7728e7af7a960"
+    },
+    {
+      "name": "task-error-feedback.md",
+      "sha256": "7b66b62add8be000758752fca324f96f8f3224af154f582bcf2b9ccde7ccff33"
+    },
+    {
+      "name": "task-final-numbers.md",
+      "sha256": "06937534431fd42564681ca1b5a5b4e123c308b38ccc71cfa3609af2934126f8"
+    },
+    {
+      "name": "task-matched-greedy.md",
+      "sha256": "113cd8be64505189c3534e105858aca73bad2f1337d8ab3fe8cc86d47fa55c2a"
+    },
+    {
+      "name": "task-positive-control.md",
+      "sha256": "d562f347e9d0a89ea571700f2beab1886e8757c91881b804451b8546e447a1e4"
+    },
+    {
+      "name": "task-prefix-transfer.md",
+      "sha256": "baa89fa69ea89ea1b569b90559ccc1bde84b6e41551f1c19bfef8f01b97709f8"
+    },
+    {
+      "name": "task-receiver-correction.md",
+      "sha256": "5fcfeda3cd01b86c3717d7bc382190a64187b115b5129e98f4ce620858bae11b"
+    },
+    {
+      "name": "task-receiver.md",
+      "sha256": "c29950a27a0e9a4290921638586f954696903ebd88d85756c4fd690f4066ce88"
+    },
+    {
+      "name": "task-roundtrip.md",
+      "sha256": "ee2ceef1164fe5d064318527f4af4eab247571c45b2c53df2ee5b1e699058ffd"
+    },
+    {
+      "name": "task-run-e2e-full.md",
+      "sha256": "198b1a31a0531e2992a0b7be248eb5cde0204339c654a9e3321d737492141b58"
+    },
+    {
+      "name": "task-run-e2e-pilot.md",
+      "sha256": "d10d87f768db8b11e16e5dfbc83f64e3315055640888a07d14ce5930752db277"
+    },
+    {
+      "name": "task-run-error-feedback.md",
+      "sha256": "96df703806e5efd3f5f71a4d544279f8cd054684800b1ac86751729534912ac1"
+    },
+    {
+      "name": "task-run-matched-greedy.md",
+      "sha256": "5fa24694de699aceff93de75d3b3987f6389ba8c1045af1d6003cd5bcd76accc"
+    },
+    {
+      "name": "task-run-prefix-transfer.md",
+      "sha256": "266dcde71d1faf732e87e213c3e0a6117c043060f4060d0fc7436a1eb89d1852"
+    },
+    {
+      "name": "task-run-receiver.md",
+      "sha256": "d535dd787b66d8f5446ffcfaebb4897bd95f24ee1ae3de04fce46ee5a8d7776c"
+    },
+    {
+      "name": "task-run-roundtrip.md",
+      "sha256": "0ecb6369e90600810a815ff5d3ccebf697e33194130310f2f0a3b7c2cd0d6685"
+    }
+  ]
+}

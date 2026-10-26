@@ -1,0 +1,81 @@
+{
+  "metric": "next-token P(token30625) at supplied S1 prefix; not generation rate",
+  "sources": {
+    "dolos": {
+      "path": "results/prefix_transfer_dolos_fp32.jsonl",
+      "sha256": "d2eb813ee82648d4ce9f7c576d96b31df7d9f4d89bd27a332d283b5e696f8b16",
+      "cells": [
+        {
+          "id": "factorial:old_aws_key2:old_generic:S1",
+          "p_target": 0.9998267292976379
+        },
+        {
+          "id": "factorial:e2e_key0:old_generic:S1",
+          "p_target": 1.0
+        },
+        {
+          "id": "factorial:e2e_key1:new_exact:S1",
+          "p_target": 8.144347284251563e-13
+        },
+        {
+          "id": "factorial:old_aws_key2:new_exact:S1",
+          "p_target": 7.041543129832073e-12
+        },
+        {
+          "id": "factorial:e2e_key1:old_generic:S1",
+          "p_target": 0.9999998807907104
+        },
+        {
+          "id": "factorial:old_aws_key:old_generic:S1",
+          "p_target": 1.0
+        },
+        {
+          "id": "factorial:e2e_key0:new_exact:S1",
+          "p_target": 9.461047159738892e-15
+        },
+        {
+          "id": "factorial:old_aws_key:new_exact:S1",
+          "p_target": 1.0182830192115647e-14
+        }
+      ]
+    },
+    "qwen": {
+      "path": "results/prefix_transfer_qwen_fp32.jsonl",
+      "sha256": "eb3d057a69b349033eabd60a70f200a83a8747aa41208f12237b780d3cc870f2",
+      "cells": [
+        {
+          "id": "factorial:old_aws_key2:old_generic:S1",
+          "p_target": 1.4070958469083353e-18
+        },
+        {
+          "id": "factorial:e2e_key0:old_generic:S1",
+          "p_target": 1.573661484545382e-18
+        },
+        {
+          "id": "factorial:e2e_key1:new_exact:S1",
+          "p_target": 1.480910821059062e-20
+        },
+        {
+          "id": "factorial:old_aws_key2:new_exact:S1",
+          "p_target": 1.6921822814691953e-20
+        },
+        {
+          "id": "factorial:e2e_key1:old_generic:S1",
+          "p_target": 1.3604526831301186e-18
+        },
+        {
+          "id": "factorial:old_aws_key:old_generic:S1",
+          "p_target": 1.5028937015996328e-18
+        },
+        {
+          "id": "factorial:e2e_key0:new_exact:S1",
+          "p_target": 1.628436221485907e-20
+        },
+        {
+          "id": "factorial:old_aws_key:new_exact:S1",
+          "p_target": 1.8282618932872646e-20
+        }
+      ]
+    }
+  }
+}

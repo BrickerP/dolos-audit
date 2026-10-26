@@ -1,0 +1,25 @@
+REFUSED: missing input file /var/folders/hg/n939g6k139q2fc457t753_b80000gp/T/tmpjyq656ny/results/e2e_confirm_qwen_fp32.jsonl
+usage: python -m unittest [-h] [--receiver-only] [--receiver-figure]
+                          [--results-dir RESULTS_DIR] [--figs-dir FIGS_DIR]
+python -m unittest: error: --receiver-figure only applies with --receiver-only (the default run always writes both figures)
+REFUSED: e2e/dolos: expected exactly 144 unique rows, found 143
+usage: python -m unittest [-h] --model {qwen,dolos} [--device {cpu,mps}]
+                          [--dtype {float32,float16}] [--output OUTPUT]
+                          [--max-new-tokens MAX_NEW_TOKENS] [--replay-only]
+                          [--build-only]
+python -m unittest: error: --replay-only and --build-only are mutually exclusive
+usage: python -m unittest [-h] --model {qwen,dolos} [--device {cpu,mps}]
+                          [--dtype {float32,float16}] [--output OUTPUT]
+                          [--max-new-tokens MAX_NEW_TOKENS] [--replay-only]
+                          [--build-only]
+python -m unittest: error: --output is required unless --build-only or --replay-only is used
+----------------------------------------------------------------------
+Ran 239 tests in 6.694s
+
+OK
+wrote /private/var/folders/hg/n939g6k139q2fc457t753_b80000gp/T/tmpkf8f139r/results/confirmatory_summary.json
+wrote /private/var/folders/hg/n939g6k139q2fc457t753_b80000gp/T/tmpkf8f139r/figs/e2e_outcomes.png
+wrote /private/var/folders/hg/n939g6k139q2fc457t753_b80000gp/T/tmpkf8f139r/figs/receiver_verdicts.png
+wrote /private/var/folders/hg/n939g6k139q2fc457t753_b80000gp/T/tmpi9ywxbq7/results/receiver_summary.json
+wrote /private/var/folders/hg/n939g6k139q2fc457t753_b80000gp/T/tmpi9ywxbq7/results/receiver_summary.json
+wrote /private/var/folders/hg/n939g6k139q2fc457t753_b80000gp/T/tmpi9ywxbq7/figs/receiver_verdicts.png
